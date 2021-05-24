@@ -1,0 +1,52 @@
+label.label-profil {
+    display: inline-block;
+    width: 120px;
+    color: #293f6f;
+
+}
+
+b {
+    color: #cdac5a;
+}
+
+fieldset {
+    border-color: #cdac5a;
+    border-radius: 5px;
+    width: 600px;
+    text-align: left;
+
+}
+
+
+@media (min-width: 768px) {
+    .container-info {
+        float: left;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+    }
+}
+
+.container-right {
+    display: inline-block;
+    position: relative;
+    transform: translateY(-10px);
+}
+
+@media (min-width: 768px) {
+    .container-main {
+        float: right;
+        /*position: fixed;*/
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+    }
+}
+
+.colorBackground{
+    background: #ece7f1;
+}
+
+

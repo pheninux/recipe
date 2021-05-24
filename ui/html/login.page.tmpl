@@ -1,0 +1,26 @@
+{{template "base" .}}
+{{define "title"}}Login{{end}}
+{{define "body"}}
+
+    <div class="container">
+        <div class="login_form_container">
+            <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
+            <form class="form_login" action='/user/login' method='POST' novalidate>
+                <div class="">
+                    <input id="email" width="700" type='email' name='email' placeholder="E-mail">
+                </div>
+                <div class="">
+                    <input id="pass" type='password' name='password' placeholder="Password">
+                </div>
+                <div class="center">
+                    <input type='submit' value='Login'>
+                </div>
+                {{with .Form}}
+                    {{with .Errors.Get "generic"}}
+                        <div class='error'>{{.}}</div>
+                    {{end}}
+                {{end}}
+            </form>
+        </div>
+    </div>
+{{end}}

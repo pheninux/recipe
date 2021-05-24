@@ -1,0 +1,33 @@
+{{template "base" .}}
+{{define "title"}}New recipe{{end}}
+{{define "body"}}
+
+    <form action="/recipe/create" method="post">
+        <!-- Title input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="formTitle" name="title" class="form-control" />
+            <label class="form-label" for="formTitle">Title</label>
+        </div>
+
+        <!-- Desc input -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="formDesc" name="desc" rows="4"></textarea>
+            <label class="form-label" for="formDesc">Description</label>
+        </div>
+
+        <!-- Obs input -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="formObs" name="obs" rows="4"></textarea>
+            <label class="form-label" for="formObs">Observation</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Create</button>
+    </form>
+
+
+{{end}}
+
+
+
+
